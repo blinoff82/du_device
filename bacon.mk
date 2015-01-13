@@ -240,6 +240,8 @@ PRODUCT_PACKAGES += \
     init.qcom.bt.sh
 
 # Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_bacon
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     $(LOCAL_PATH)/bacon
 
