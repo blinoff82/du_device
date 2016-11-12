@@ -14,3 +14,6 @@
 
 # Modem
 /dev/subsys_modem                                       u:object_r:subsys_modem_device:s0
+
+# WiFi MAC
+/persist/.genmac                                        u:object_r:wifi_data_file:s0
