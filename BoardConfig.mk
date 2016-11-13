@@ -176,6 +176,9 @@ TARGET_NO_RPC := true
 #BOARD_SEPOLICY_DIRS += \
 #    $(PLATFORM_PATH)/sepolicy
 
+# Sensors
+TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
+
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true
 BOARD_HAS_QCOM_WLAN_SDK          := true
