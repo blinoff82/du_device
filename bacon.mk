@@ -58,6 +58,7 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcomvoiceprocessingdescriptors \
+    Music \
     tinymix
 
 # Boot animation
@@ -67,7 +68,8 @@ TARGET_SCREEN_WIDTH := 1080
 # Camera
 PRODUCT_PACKAGES += \
     camera.bacon \
-    Snap
+    CameraNext \
+    GalleryNext
 
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.codecremote=false
