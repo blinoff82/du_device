@@ -203,8 +203,6 @@ ifneq ($(QCPATH),)
 FEATURE_QCRIL_UIM_SAP_SERVER_MODE := true
 
 # QCNE
-BOARD_USES_QCNE := true
-
 ifeq ($(BOARD_USES_QCNE),true)
 TARGET_LDPRELOAD := libNimsWrap.so
 endif
