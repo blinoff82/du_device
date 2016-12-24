@@ -69,12 +69,10 @@ TARGET_SCREEN_WIDTH := 1080
 # Camera
 PRODUCT_PACKAGES += \
     camera.bacon \
-    libshim_camera \
-    CameraNext \
-    GalleryNext
-
+    libshim_camera
+    
 PRODUCT_PROPERTY_OVERRIDES += \
-    media.stagefright.codecremote=false
+    media.stagefright.codecremote=false \
     Snap
 
 # Charger
@@ -257,6 +255,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant
 
 PRODUCT_PACKAGES += \
+    dhcpcd.conf \
     hostapd_default.conf \
     hostapd.accept \
     hostapd.deny \
