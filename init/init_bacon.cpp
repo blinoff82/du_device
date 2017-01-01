@@ -101,3 +101,9 @@ static void import_kernel_nv(const std::string& key,
         property_set("ro.oppo.pcb_version", value.c_str());
     }
 }
+
+void vendor_load_properties()
+{
+    import_kernel_cmdline(0, import_kernel_nv);
+    init_alarm_boot_properties();
+}
