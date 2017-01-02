@@ -35,6 +35,7 @@
 #include <sys/types.h>
 
 #include <cutils/properties.h>
+#include "property_service.h"
 #include "vendor_init.h"
 #include "log.h"
 #include "util.h"
