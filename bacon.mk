@@ -176,6 +176,10 @@ PRODUCT_COPY_FILES += \
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8974
+    
+# Kernel Adiutor Mod
+PRODUCT_PACKAGES += \
+    KernelAdiutorMod
 
 # Lights
 PRODUCT_PACKAGES += \
