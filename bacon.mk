@@ -67,10 +67,8 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    SnapdragonCamera \
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.stagefright.codecremote=false \
+    camera.msm8974 \
+    SnapdragonCamera
 
 # Charger
 PRODUCT_PACKAGES += \
