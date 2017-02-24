@@ -68,9 +68,7 @@ TARGET_SCREEN_WIDTH := 1080
 # Camera
 PRODUCT_PACKAGES += \
     SnapdragonCamera \
-    camera.bacon \
-    libshim_camera
-    
+
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.codecremote=false \
 
