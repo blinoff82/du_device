@@ -231,7 +231,9 @@ PRODUCT_PACKAGES += \
     init.recovery.bacon.rc \
     init.lk.rc \
     libinit_bacon \
-    ueventd.bacon.rc
+    ueventd.bacon.rc \
+	init.ab123321.rc \
+	init.performance_profiles.rc
 
 PRODUCT_PACKAGES += \
     init.qcom.bt.sh
