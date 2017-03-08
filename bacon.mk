@@ -59,7 +59,6 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libqcomvoiceprocessingdescriptors \
     Music \
-    masquerade \
     tinymix
 
 # Boot animation
