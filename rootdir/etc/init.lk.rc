@@ -88,7 +88,7 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpufreq/umbrella_core/min_sample_time 80000
     write /sys/devices/system/cpu/cpufreq/umbrella_core/max_inactive_freq 1267200
     write /sys/devices/system/cpu/cpufreq/umbrella_core/hispeed_freq 1036800
-    write /sys/kernel/msm_limiter/scaling_governor "0:interactive 1:yankactive 2:umbrella_core 3:yankactive"
+    write /sys/kernel/msm_limiter/scaling_governor "0:interactive 1:alucard 2:umbrella_core 3:alucard"
     write /sys/kernel/msm_limiter/resume_max_freq "0:2457600 1:1574400 2:1574400 3:1574400"
 
   # cpu_quiet
