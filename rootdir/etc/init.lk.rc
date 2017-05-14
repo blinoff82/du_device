@@ -79,8 +79,8 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpufreq/interactive/target_loads "90"
     write /sys/devices/system/cpu/cpufreq/interactive/min_sample_time 40000
     write /sys/devices/system/cpu/cpufreq/interactive/max_freq_hysteresis 100000
-    write /sys/devices/system/cpu/cpufreq/interactive/timer_rate 30000
-    write /sys/devices/system/cpu/cpufreq/interactive/timer_slack 80000
+    write /sys/devices/system/cpu/cpufreq/interactive/timer_rate 10000
+    write /sys/devices/system/cpu/cpufreq/interactive/timer_slack 0
 
     write /sys/kernel/msm_limiter/scaling_governor "0:umbrella_core"
     write /sys/devices/system/cpu/cpufreq/umbrella_core/go_hispeed_load 99
