@@ -214,7 +214,7 @@ BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
 #Snapdragon LLVM Compiler
 ifneq ($(HOST_OS),darwin)
-SDCLANG := true
+TARGET_USE_SDCLANG := true
 SDCLANG_PATH := prebuilts/clang/linux-x86/host/sdclang-3.8/bin
 SDCLANG_LTO_DEFS := device/qcom/common/sdllvm-lto-defs.mk
 endif
