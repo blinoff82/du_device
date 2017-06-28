@@ -88,8 +88,7 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpufreq/umbrella_core/min_sample_time 80000
     write /sys/devices/system/cpu/cpufreq/umbrella_core/max_inactive_freq 1267200
     write /sys/devices/system/cpu/cpufreq/umbrella_core/hispeed_freq 1036800
-    write /sys/kernel/msm_limiter/scaling_governor "0:interactive 1:smartmax_eps 2:umbrella_core 3:smartmax_eps"
-    write /sys/kernel/msm_limiter/resume_max_freq "0:2457600 1:1574400 2:1574400 3:1574400"
+    write /sys/kernel/msm_limiter/scaling_governor "0:alucard 1:alucard 2:alucard 3:alucard"
 
     # cpu_quiet
     write /sys/devices/system/cpu/cpuquiet/cpuquiet_driver/enabled 0
@@ -131,9 +130,9 @@ on property:sys.boot_completed=1
 	
     # cpu boost
     write /sys/module/cpu_boost/parameters/boost_ms 20
-    write /sys/module/cpu_boost/parameters/sync_threshold 0
-    write /sys/module/cpu_boost/parameters/input_boost_freq "0:0 1:0 2:1036800 3:0"
-    write /sys/module/cpu_boost/parameters/input_boost_ms 300
+    write /sys/module/cpu_boost/parameters/sync_threshold 1574400
+    write /sys/module/cpu_boost/parameters/input_boost_freq 1497600
+    write /sys/module/cpu_boost/parameters/input_boost_ms 800
     write /sys/module/cpu_boost/parameters/input_boost_enabled 1
     write /sys/module/cpu_boost/parameters/wakeup_boost "Y"
     write /sys/module/cpu_boost/parameters/hotplug_boost "Y"
