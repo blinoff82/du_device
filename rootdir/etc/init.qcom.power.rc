@@ -62,18 +62,6 @@ on enable-low-power
     write /sys/module/cpu_boost/parameters/input_boost_freq 1497600
     write /sys/module/cpu_boost/parameters/input_boost_ms 40
 
-    write /sys/kernel/msm_thermal/enabled 0
-    write /sys/kernel/msm_thermal/zone0 "1728000 39 38"
-    write /sys/kernel/msm_thermal/zone1 "1574400 42 40"
-    write /sys/kernel/msm_thermal/zone2 "1497600 45 43"
-    write /sys/kernel/msm_thermal/zone3 "1267200 49 46"
-    write /sys/kernel/msm_thermal/zone4 "1190400 53 50"
-    write /sys/kernel/msm_thermal/zone5 "1036800 56 54"
-    write /sys/kernel/msm_thermal/zone6 "960000 62 60"
-    write /sys/kernel/msm_thermal/zone7 "729600 79 75"
-    write /sys/kernel/msm_thermal/sampling_ms 8000
-    write /sys/kernel/msm_thermal/enabled 1
-
     write /sys/class/devfreq/qcom,cpubw.40/governor "cpubw_hwmon"
     write /sys/class/kgsl/kgsl-3d0/devfreq/governor msm-adreno-tz
 
@@ -102,14 +90,6 @@ on charger
     write /sys/devices/system/cpu/cpu1/online 0
     write /sys/devices/system/cpu/cpu2/online 0
     write /sys/devices/system/cpu/cpu3/online 0
-
-on boot
-    # Set light thermal restrictions while optimizing apps
-    # [throttle_freq, throttle_temp, unthrottle_temp]
-    write /sys/kernel/msm_thermal/zone0 "1728000 45 43"
-    write /sys/kernel/msm_thermal/zone1 "1574400 50 47"
-    write /sys/kernel/msm_thermal/zone2 "1267200 55 53"
-    write /sys/kernel/msm_thermal/enabled 1
 
 on boot
     trigger enable-low-power
