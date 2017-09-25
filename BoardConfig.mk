@@ -157,7 +157,11 @@ TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.bacon
 TARGET_NO_RPC := true
 
 # Snapdragon LLVM
+ifneq ($(HOST_OS),darwin)
 TARGET_USE_SDCLANG := true
+SDCLANG_PATH := prebuilts/clang/linux-x86/host/sdclang-3.8/bin
+SDCLANG_LTO_DEFS := device/qcom/common/sdllvm-lto-defs.mk
+endif
 
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true
