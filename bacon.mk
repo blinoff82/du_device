@@ -21,6 +21,12 @@ endif
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay vendor/extra/overlays/phone-1080p
 
+# ANT+
+PRODUCT_PACKAGES += \
+    AntHalService \
+    com.dsi.ant.antradio_library \
+    libantradio
+
 # AOSP Packages
 PRODUCT_PACKAGES += \
     Launcher3 \
@@ -240,6 +246,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
+    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
@@ -290,6 +297,10 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl
+    
+# STK
+PRODUCT_PACKAGES += \
+    Stk
 
 # Themes
 PRODUCT_PACKAGES += \
@@ -329,6 +340,7 @@ PRODUCT_PACKAGES += \
     wifilogd
 
 PRODUCT_PACKAGES += \
+    dhcpcd.conf \
     hostapd_default.conf \
     hostapd.accept \
     hostapd.deny \
