@@ -87,6 +87,10 @@ PRODUCT_PACKAGES += \
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
+    
+# CLI
+PRODUCT_PACKAGES += \
+    nano
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
