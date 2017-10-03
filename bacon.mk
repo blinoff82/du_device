@@ -217,7 +217,7 @@ PRODUCT_PACKAGES += \
 
 # Music
 PRODUCT_PACKAGES += \
-    Phonograph
+    Music
 
 # NFC
 ifeq ($(TARGET_BUILD_VARIANT),user)
