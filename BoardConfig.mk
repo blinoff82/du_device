@@ -163,6 +163,7 @@ TARGET_RIL_VARIANT := caf
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.bacon
+LZMA_RAMDISK_TARGETS := recovery
 
 # RPC
 TARGET_NO_RPC := true
