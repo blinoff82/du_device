@@ -21,7 +21,7 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 268800
     chown system.system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
     chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2457600
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2265000
 
     # Governor settings
 	
@@ -124,7 +124,7 @@ on property:sys.boot_completed=1
 	
     # mics tweaks
     write /sys/module/mdss_fb/parameters/backlight_dimmer "N"
-    write /sys/kernel/sched/gentle_fair_sleepers 0
+    write /sys/kernel/sched/gentle_fair_sleepers 1
     write /sys/module/adreno_idler/parameters/adreno 1
     write /sys/module/kernel/parameters/initcall_debug "N"
     write /sys/module/alarm_dev/parameters/debug_mask 0	
@@ -149,8 +149,8 @@ on property:sys.boot_completed=1
     write /sys/block/mmcblk0/queue/rq_affinity 1
     write /sys/block/mmcblk0/queue/add_random 0
     write /sys/block/mmcblk0/bdi/min_ratio 5
-    write /sys/block/mmcblk0/queue/read_ahead_kb 1024
-    write /sys/block/mmcblk0/queue/scheduler "bfq"
+    write /sys/block/mmcblk0/queue/read_ahead_kb 2048
+    write /sys/block/mmcblk0/queue/scheduler "fiops"
 	
     # process reclaim
     write /sys/module/process_reclaim/parameters/enable_process_reclaim 1
